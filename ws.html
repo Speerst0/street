@@ -939,6 +939,7 @@
                                 <th>Nama</th>
                                 <th>Produk</th>
                                 <th>Total</th>
+                                <th>Email</th>
                                 <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
@@ -1056,7 +1057,7 @@
                 const password = document.getElementById('password').value;
                 
                 // Simple password check (in production, use proper authentication)
-                if(password === 'admin123') {
+                if(password === 'rhejaa123') {
                     document.getElementById('adminLogin').style.display = 'none';
                     document.getElementById('adminPanel').style.display = 'block';
                     
@@ -1324,7 +1325,7 @@
                     id: orderId,
                     date: new Date().toISOString(),
                     name,
-                    email,
+                    email: email, 
                     phone,
                     product,
                     size,
@@ -1364,20 +1365,11 @@
             <form id="paymentConfirmationForm">
                 <div class="form-group">
                     <label for="confirmationEmail">Email Anda</label>
-                    <input type="email" id="confirmationEmail" class="form-control" required>
+                    <input type="halo.speerstreet@gmail.com" id="confirmationEmail" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="orderNumber">No. Order/WhatsApp</label>
                     <input type="text" id="orderNumber" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="paymentMethod">Metode Pembayaran</label>
-                    <select id="paymentMethod" class="form-control" required>
-                        <option value="">-- Pilih Pembayaran --</option>
-                        <option value="WhatsApp">WhatsApp</option>
-                        <option value="DANA">DANA</option>
-                        <option value="QRIS">QRIS</option>
-                    </select>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="submit-btn">Submit Konfirmasi</button>
