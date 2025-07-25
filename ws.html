@@ -940,6 +940,7 @@
                                 <th>Produk</th>
                                 <th>Total</th>
                                 <th>Email</th>
+                                <th>No.Wa</th>
                                 <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
@@ -1103,6 +1104,7 @@
                     <td>${order.product}</td>
                     <td>Rp ${order.total.toLocaleString('id-ID')}</td>
                     <td>${order.email}</td>
+                    <td>${order.waUser}</td>
                     <td>Pending</td>
                     <td>
                         <button class="admin-btn admin-btn-primary">Detail</button>
@@ -1326,7 +1328,7 @@
                     date: new Date().toISOString(),
                     name,
                     email: email, 
-                    phone,
+                    phone: waUser, 
                     product,
                     size,
                     quantity,
